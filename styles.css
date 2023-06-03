@@ -24,7 +24,6 @@ h1{
 .the-buttons{
   text-align: center;
   margin: 20px auto;
-  font-size: 8px;
 }
 
 #clear{
@@ -34,6 +33,7 @@ h1{
   border-radius: 2px;
   border: 1px solid #1b0e0a;
   margin: 2px;
+  font-size: 12px;
 }
 
 #clear:active{
@@ -48,6 +48,7 @@ h1{
   border-radius: 2px;
   border: 1px solid #1b0e0a;
   margin: 2px;
+  font-size: 12px;
 }
 #rainbow-mode{
   border-style: none;
@@ -56,6 +57,7 @@ h1{
   border-radius: 2px;
   border: 1px solid #1b0e0a;
   margin: 2px;
+  font-size: 12px;
 }
 #color-mode{
   border-style: none;
@@ -64,6 +66,7 @@ h1{
   border-radius: 2px;
   border: 1px solid #1b0e0a;
   margin: 2px;
+  font-size: 12px;
 }
 
 
