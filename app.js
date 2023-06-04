@@ -5,6 +5,8 @@ const container = document.querySelector('#container');
 const colorMode = document.querySelector('#color-mode');
 const colorPicker = document.querySelector('#colorpicker')
 const slider = document.querySelector('.slider')
+const rangeCounter = document.querySelector('#range-counter')
+
 
 let colorPicked;
 let colorPickerbutton = true;
@@ -21,6 +23,7 @@ let numberOfSquares;
 slider.addEventListener('input', function(){
   let sliderValue;
   sliderValue = slider.value;
+  rangeCounter.textContent = `${sliderValue} x ${sliderValue}`;
   numberOfSquares = sliderValue;
   createGrid(numberOfSquares);
 });
@@ -70,6 +73,7 @@ function createGrid(numberOfSquares) {
     const theDivs = document.createElement('div');
     theDivs.classList.add('squares');
     theDivs.style.cssText = `box-sizing: border-box; flex-basis: calc(100% / ${numberOfSquares});`;
+    colorMode.style.cssText = 'background-color: #1b0e0a; color: white';
     theDivs.addEventListener('mouseover', function (event) {
       if ( colorPickerbutton === true && event.buttons === 1) {
         theDivs.style.backgroundColor = colorPicker.value;
