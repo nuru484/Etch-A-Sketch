@@ -12,9 +12,9 @@ let colorPicked;
 let colorPickerbutton = true;
 
 colorMode.addEventListener('click', function(){
-  colorMode.style.cssText = 'background-color: #1b0e0a; color: white';
-  rainbow.style.cssText = 'background-color: white; color: #1b0e0a';
-  eraser.style.cssText = 'background-color: white; color: #1b0e0a';
+  colorMode.style.cssText = 'background-color: #1b0e0a; color: gainsboro';
+  rainbow.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
+  eraser.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
   eraserClicked = false
   colorPickerbutton = true;
 });
@@ -30,9 +30,9 @@ slider.addEventListener('input', function(){
 
 let eraserClicked = false
 eraser.addEventListener('click', function () {
-  eraser.style.cssText = 'background-color: #1b0e0a; color: white';
-  colorMode.style.cssText = 'background-color: white; color: #1b0e0a';
-  rainbow.style.cssText = 'background-color: white; color: #1b0e0a';
+  eraser.style.cssText = 'background-color: #1b0e0a; color: gainsboro';
+  colorMode.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
+  rainbow.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
   eraserClicked = true;
   const squares = container.querySelectorAll('.squares');
   squares.forEach((square) => {
@@ -56,9 +56,9 @@ function generateRandomColor() {
 var rainbowIsClicked = false;
 
 rainbow.addEventListener('click', function() {
-  rainbow.style.cssText = 'background-color: #1b0e0a; color: white';
-  colorMode.style.cssText = 'background-color: white; color: #1b0e0a';
-  eraser.style.cssText = 'background-color: white; color: #1b0e0a';
+  rainbow.style.cssText = 'background-color: #1b0e0a; color: gainsboro';
+  colorMode.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
+  eraser.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
   eraserClicked = false;
   rainbowIsClicked = true;
   colorPickerbutton = false;
