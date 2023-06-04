@@ -26,23 +26,37 @@ slider.addEventListener('input', function(){
   rangeCounter.textContent = `${sliderValue} x ${sliderValue}`;
   numberOfSquares = sliderValue;
   createGrid(numberOfSquares);
+  if(rainbowIsClicked === true || eraserClicked === true){
+    colorMode.style.cssText = 'background-color: gainsboro; color: #1b0e0a'
+    const squares = container.querySelectorAll('.squares');
+    squares.forEach((square) => {
+      square.addEventListener('mouseover', function (event) {
+          if (eraserClicked === true && event.buttons === 1){
+            square.style.backgroundColor = 'white';
+          }
+      });
+    });
+  } 
 });
 
 let eraserClicked = false
-eraser.addEventListener('click', function () {
-  eraser.style.cssText = 'background-color: #1b0e0a; color: gainsboro';
-  colorMode.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
-  rainbow.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
-  eraserClicked = true;
-  const squares = container.querySelectorAll('.squares');
-  squares.forEach((square) => {
-    square.addEventListener('mouseover', function (event) {
-        if (eraserClicked === true && event.buttons === 1){
-          square.style.backgroundColor = 'white';
-        }
+
+  eraser.addEventListener('click', function () {
+    eraser.style.cssText = 'background-color: #1b0e0a; color: gainsboro';
+    colorMode.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
+    rainbow.style.cssText = 'background-color: gainsboro; color: #1b0e0a';
+    eraserClicked = true;
+    const squares = container.querySelectorAll('.squares');
+    squares.forEach((square) => {
+      square.addEventListener('mouseover', function (event) {
+          if (eraserClicked === true && event.buttons === 1){
+            square.style.backgroundColor = 'white';
+          }
+      });
     });
   });
-});
+
+
 
 
 function generateRandomColor() {
