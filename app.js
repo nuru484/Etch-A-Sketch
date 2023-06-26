@@ -97,7 +97,7 @@ function createGrid(numberOfSquares) {
   });
     fragment.appendChild(theDivs);
 
-    clear.addEventListener('click', function () {
+    clear.addEventListener('click {
       theDivs.style.backgroundColor = 'white';
     });
   }
